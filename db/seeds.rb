@@ -8,10 +8,10 @@
 puts "beging seeding test data"
 
 puts "seeding movies"
-Movie.create(name: "Friday the 13th", poster: "posterurl")
-Movie.create(name: "The Conjuring", poster: "posterurl")
-Movie.create(name: "The Nun", poster: "posterurl")
-Movie.create(name: "The Ring", poster: "posterurl")
+Movie.create(name: "Friday the 13th", poster: "posterurl", synopsis: "scary stuff")
+Movie.create(name: "The Conjuring", poster: "posterurl", synopsis: "really scary stuff")
+Movie.create(name: "The Nun", poster: "posterurl", synopsis: "very scary stuff")
+Movie.create(name: "The Ring", poster: "posterurl", synopsis: "funny scary stuff")
 
 puts "seeding clubs"
 Club.create(movie_id: 1, active: true)
@@ -67,3 +67,111 @@ Rating.create(user_id: 15, liked: false, movie_id: 1)
 puts "seeding finished"
 
 puts "Reminder: this is only test data"
+
+# Tmdb::Genre.movie_list
+#
+# config = Tmdb::Configuration.get
+#
+# puts "TMDB start"
+#
+# # Response
+# Tmdb::Configuration {
+#          :images => Tmdb::Configuration {
+#                :base_url => "http://image.tmdb.org/t/p/",
+#         :secure_base_url => "https://image.tmdb.org/t/p/",
+#          :backdrop_sizes => [
+#             [0] "w300",
+#             [1] "w780",
+#             [2] "w1280",
+#             [3] "original"
+#         ],
+#              :logo_sizes => [
+#             [0] "w45",
+#             [1] "w92",
+#             [2] "w154",
+#             [3] "w185",
+#             [4] "w300",
+#             [5] "w500",
+#             [6] "original"
+#         ],
+#            :poster_sizes => [
+#             [0] "w92",
+#             [1] "w154",
+#             [2] "w185",
+#             [3] "w342",
+#             [4] "w500",
+#             [5] "w780",
+#             [6] "original"
+#         ],
+#           :profile_sizes => [
+#             [0] "w45",
+#             [1] "w185",
+#             [2] "h632",
+#             [3] "original"
+#         ],
+#             :still_sizes => [
+#             [0] "w92",
+#             [1] "w185",
+#             [2] "w300",
+#             [3] "original"
+#         ]
+#     },
+#     :change_keys => [
+#         [ 0] "adult",
+#         [ 1] "air_date",
+#         [ 2] "also_known_as",
+#         [ 3] "alternative_titles",
+#         [ 4] "biography",
+#         [ 5] "birthday",
+#         [ 6] "budget",
+#         [ 7] "cast",
+#         [ 8] "certifications",
+#         [ 9] "character_names",
+#         [10] "created_by",
+#         [11] "crew",
+#         [12] "deathday",
+#         [13] "episode",
+#         [14] "episode_number",
+#         [15] "episode_run_time",
+#         [16] "freebase_id",
+#         [17] "freebase_mid",
+#         [18] "general",
+#         [19] "genres",
+#         [20] "guest_stars",
+#         [21] "homepage",
+#         [22] "images",
+#         [23] "imdb_id",
+#         [24] "languages",
+#         [25] "name",
+#         [26] "network",
+#         [27] "origin_country",
+#         [28] "original_name",
+#         [29] "original_title",
+#         [30] "overview",
+#         [31] "parts",
+#         [32] "place_of_birth",
+#         [33] "plot_keywords",
+#         [34] "production_code",
+#         [35] "production_companies",
+#         [36] "production_countries",
+#         [37] "releases",
+#         [38] "revenue",
+#         [39] "runtime",
+#         [40] "season",
+#         [41] "season_number",
+#         [42] "season_regular",
+#         [43] "spoken_languages",
+#         [44] "status",
+#         [45] "tagline",
+#         [46] "title",
+#         [47] "translations",
+#         [48] "tvdb_id",
+#         [49] "tvrage_id",
+#         [50] "type",
+#         [51] "video",
+#         [52] "videos"
+#     ]
+# }
+#
+# # Retrieve images base url example
+# base_url = config.images.base_url

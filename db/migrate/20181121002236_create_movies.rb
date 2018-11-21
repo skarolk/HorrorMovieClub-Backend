@@ -3,6 +3,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
     create_table :movies do |t|
       t.string :name
       t.string :poster
+      t.string :synopsis
 
       t.timestamps
     end
