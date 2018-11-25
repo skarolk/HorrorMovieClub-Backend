@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_11_21_003524) do
     t.string "name"
     t.string "poster"
     t.string "synopsis"
+    t.string "release"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

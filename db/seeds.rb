@@ -17,18 +17,26 @@ def create_movies()
   page_number = 1
   total_pages = page_check()
   while page_number < total_pages
-    puts "on #{page_number} of #{total_pages}"
     movies = Tmdb::Genre.movies(27, page: page_number)
     i = 0
     while i < 20
-      movie_name = movies.results[i].original_title
-      movie_summary = movies.results[i].overview
-      movie_poster = movies.results[i].poster_path
-      Movie.create(name: movie_name, poster: movie_poster, synopsis: movie_summary)
-      i += 1
-      puts "creating #{movie_name}"
+      if (movies.results[i].original_language == "en") && (movies.results[i].adult == false)
+        movie_name = movies.results[i].original_title
+        movie_summary = movies.results[i].overview
+        movie_poster = movies.results[i].poster_path
+        movie_release = movies.results[i].release_date
+        Movie.create(name: movie_name, poster: movie_poster, synopsis: movie_summary, release: movie_release)
+        i += 1
+        puts "creating #{movie_name}"
+      else
+        i += 1
+      end
     end
-    sleep(10)
+    if page_number % 30 == 0
+      puts "on #{page_number} of #{total_pages}"
+      puts "waiting ..."
+      sleep(30)
+    end
     page_number += 1
   end
 end
