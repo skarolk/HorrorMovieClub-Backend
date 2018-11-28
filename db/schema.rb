@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_11_21_003524) do
     t.string "username"
     t.string "image"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.boolean "matched"
     t.integer "club_id"
     t.datetime "created_at", null: false

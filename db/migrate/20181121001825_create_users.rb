@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.string :image
       t.string :email
-      t.string :password
+      t.string :password_digest
       t.boolean :matched
       t.integer :club_id
 

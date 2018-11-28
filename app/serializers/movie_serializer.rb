@@ -12,7 +12,7 @@ class MovieSerializer < ActiveModel::Serializer
     has_many :users
 
     class UserSerializer < ActiveModel::Serializer
-      attributes :id, :username, :email, :password, :matched, :created_at, :updated_at
+      attributes :id, :username, :image, :email, :matched, :created_at, :updated_at
       has_many :ratings
 
       class RatingSerializer < ActiveModel::Serializer
