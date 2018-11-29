@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :image, :email, :matched, :club_id, :created_at, :updated_at
+  attributes :id, :username, :image, :matched, :club_id, :created_at, :updated_at
   has_many :ratings
 
   class RatingSerializer < ActiveModel::Serializer
