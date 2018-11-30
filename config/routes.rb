@@ -10,6 +10,8 @@ Rails.application.routes.draw do
         resources :ratings, only: [:index, :create]
         resources :movies, only: :index
         resources :friends, only: :index
+        resources :messages, only: [:create]
+        mount ActionCable.server => '/cable'
       end
     end
   end
