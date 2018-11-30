@@ -1,12 +1,14 @@
 class Api::V1::MessagesController < ApplicationController
+  skip_before_action :authorized, only: [:create]
+
   def create
     @message = Message.create(message_params)
-    club = Club.find(message_params[:club_id])
+    @club = Club.find(message_params[:club_id])
     if @message.save
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
-        MessageSerializer.new(message)
+        MessageSerializer.new(@message)
       ).serializable_hash
-      MessagesChannel.broadcast_to club, serialized_data
+      MessagesChannel.broadcast_to @club, serialized_data
       head :ok
     end
   end
