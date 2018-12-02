@@ -20,7 +20,7 @@ def create_movies()
     movies = Tmdb::Genre.movies(27, page: page_number)
     i = 0
     while i < 20
-      if (movies.results[i].original_language == "en") && (movies.results[i].adult == false)
+      if (movies.results[i].original_language == "en") && (movies.results[i].adult == false) && (movies.results[i].poster_path != nil)
         movie_name = movies.results[i].original_title
         movie_summary = movies.results[i].overview
         movie_poster = movies.results[i].poster_path
