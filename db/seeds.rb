@@ -52,11 +52,11 @@ puts "beging seeding test data"
 # Movie.create(name: "The Ring", poster: "posterurl", synopsis: "funny scary stuff")
 
 puts "seeding clubs"
-Club.create(movie_id: 1, active: true)
+Club.create(movie_id: 5, active: true)
 Club.create(movie_id: 2, active: true)
 Club.create(movie_id: 3, active: true)
 Club.create(movie_id: 4, active: false)
-Club.create(movie_id: 1, active: true)
+Club.create(movie_id: 5, active: true)
 
 puts "seeding users"
 User.create(username: "Seb", email: "seb@seb", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
@@ -75,9 +75,9 @@ User.create(username: "Bozena", email: "bozena@bozena", password: "secure", matc
 User.create(username: "Nicole", email: "nicole@nicole", password: "secure", matched: false, club_id: 4, image: "https://i.imgur.com/RTdi6B1.png")
 User.create(username: "Al", email: "al@al", password: "secure", matched: false, club_id: 4, image: "https://i.imgur.com/RTdi6B1.png")
 
-User.create(username: "Leszek", email: "leszek@leszek", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Baby", email: "baby@baby", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Panther", email: "panther@panther", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Leszek", email: "leszek@leszek", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Baby", email: "baby@baby", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Panther", email: "panther@panther", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
 
 puts "seeding ratings"
 Rating.create(user_id: 1, liked: true, movie_id: 1)
