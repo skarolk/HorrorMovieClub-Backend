@@ -67,13 +67,13 @@ User.create(username: "Sasha", email: "sasha@sasha", password: "secure", matched
 User.create(username: "ChiChi", email: "chichi@chichi", password: "secure", matched: true, club_id: 2, image: "https://i.imgur.com/RTdi6B1.png")
 User.create(username: "Dude", email: "dude@dude", password: "secure", matched: true, club_id: 2, image: "https://i.imgur.com/RTdi6B1.png")
 
-User.create(username: "Bentley", email: "bentley@bentley", password: "secure", matched: true, club_id: 3, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Spencer", email: "spencer@spencer", password: "secure", matched: true, club_id: 3, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Tom", email: "tom@tom", password: "secure", matched: true, club_id: 3, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Bentley", email: "bentley@bentley", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Spencer", email: "spencer@spencer", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Tom", email: "tom@tom", password: "secure", matched: true, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
 
-User.create(username: "Bozena", email: "bozena@bozena", password: "secure", matched: false, club_id: 4, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Nicole", email: "nicole@nicole", password: "secure", matched: false, club_id: 4, image: "https://i.imgur.com/RTdi6B1.png")
-User.create(username: "Al", email: "al@al", password: "secure", matched: false, club_id: 4, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Bozena", email: "bozena@bozena", password: "secure", matched: false, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Nicole", email: "nicole@nicole", password: "secure", matched: false, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
+User.create(username: "Al", email: "al@al", password: "secure", matched: false, club_id: 5, image: "https://i.imgur.com/RTdi6B1.png")
 
 User.create(username: "Leszek", email: "leszek@leszek", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
 User.create(username: "Baby", email: "baby@baby", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
