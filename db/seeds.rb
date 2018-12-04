@@ -52,11 +52,11 @@ puts "beging seeding test data"
 # Movie.create(name: "The Ring", poster: "posterurl", synopsis: "funny scary stuff")
 
 puts "seeding clubs"
-Club.create(movie_id: 5, active: true)
+Club.create(movie_id: 54, active: true)
 Club.create(movie_id: 2, active: true)
 Club.create(movie_id: 3, active: true)
 Club.create(movie_id: 4, active: false)
-Club.create(movie_id: 5, active: true)
+Club.create(movie_id: 62, active: true)
 
 puts "seeding users"
 User.create(username: "Seb", email: "seb@seb", password: "secure", matched: true, club_id: 1, image: "https://i.imgur.com/RTdi6B1.png")
