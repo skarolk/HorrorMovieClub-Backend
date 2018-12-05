@@ -13,7 +13,8 @@ class Api::V1::ClubsController < ApplicationController
         ClubSerializer.new(@club)
       ).serializable_hash
       ActionCable.server.broadcast 'clubs_channel', serialized_data
-      head :ok
+      render json: serialized_data
+      #head :ok
     end
   end
 
