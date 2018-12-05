@@ -16,7 +16,7 @@ end
 def create_movies()
   page_number = 1
   total_pages = page_check()
-  while page_number < 5
+  while page_number < 20
     movies = Tmdb::Genre.movies(27, page: page_number)
     i = 0
     while i < 20
